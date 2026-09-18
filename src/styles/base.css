@@ -1,0 +1,170 @@
+/* ============ 180 GRAUS · tokens ============ */
+:root {
+  /* identidade 180 GRAUS: verde marca + creme, retrô anos 70 */
+  --dark: #0a1f12; /* verde profundo quase-preto (fase escura) */
+  --dark-2: #123528;
+  --light: #f5f0df; /* creme dos cartazes */
+  --light-2: #eae3cc;
+  --ink: #141a12; /* preto tinta */
+  --ink-soft: #4a5442;
+  --fog: rgba(245, 240, 223, 0.75);
+  --accent: #2f9e5e; /* verde marca: display grande e grafismos */
+  --accent-deep: #1e7443; /* verde de interação: botões e texto pequeno (AA) */
+  --on-accent: #f5f0df;
+
+  --font-display: 'Anton', 'Arial Narrow', sans-serif;
+  --font-body: 'Archivo', system-ui, sans-serif;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* escala z: 30 menu mobile · 35 header · 40 cta fixo */
+}
+
+/* ============ reset ============ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* motion-v useScroll com target: o container (html) precisa ser non-static */
+  position: relative;
+}
+
+/* Âncoras param abaixo do header fixo */
+[id] {
+  scroll-margin-top: 84px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  background: var(--dark);
+  color: var(--light);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent-deep);
+  color: var(--on-accent);
+}
+
+/* ============ acessibilidade ============ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent-deep);
+  color: var(--on-accent);
+  font-weight: 700;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============ tipografia ============ */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+/* Título de seção estilo cartaz: verde marca com sombra dura de tinta */
+h2 {
+  font-size: clamp(2.4rem, 9vw, 4.2rem);
+  color: var(--accent-deep);
+  text-shadow: 0.045em 0.045em 0 var(--ink);
+}
+
+p {
+  max-width: 62ch;
+}
+
+a {
+  color: inherit;
+}
+
+/* ============ layout ============ */
+.wrap {
+  width: min(100% - 2.5rem, 1080px);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(4.5rem, 14vw, 8rem);
+}
+
+.light-zone {
+  background: var(--light);
+  color: var(--ink);
+}
+
+/* ============ CTA (pill para interativos, 20px para mídia) ============ */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cta--accent {
+  background: var(--accent-deep);
+  color: var(--on-accent);
+}
+
+.cta--ghost {
+  border: 2px solid currentColor;
+  background: transparent;
+  color: inherit;
+}
+
+.cta--dark {
+  background: var(--ink);
+  color: var(--light);
+}
