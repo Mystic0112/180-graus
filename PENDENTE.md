@@ -27,4 +27,4 @@ Atualizado: links, imagem OG e 4 das 6 fotos já entraram. Falta o que está aba
 - Link do Instagram: `https://www.instagram.com/p/Dc56mJNR-ln/` (`src/config.js`)
 - Fotos de Adoração, Pregação, Oração e Novas amizades
 - Imagem OG (`public/og.jpg`) e URLs absolutas de produção nas tags
-  (`https://mystic0112.github.io/Site-do-Armando/`)
+  (`https://mystic0112.github.io/180-graus/`)
