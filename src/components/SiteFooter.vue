@@ -11,6 +11,17 @@ import { INSTAGRAM_URL, EVENTO } from '../config'
         <a :href="INSTAGRAM_URL" target="_blank" rel="noopener">Instagram</a>
         <a href="#conteudo">Voltar ao topo</a>
       </nav>
+      <div class="creditos">
+        <p>© 2026 180 GRAUS. Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido por
+          <a
+            href="https://www.instagram.com/helio.vlm?stkn=MXRmd3JobmxjcHhiMQ=="
+            target="_blank"
+            rel="noopener"
+          >Helio Vinicius</a>
+        </p>
+      </div>
     </div>
   </footer>
 </template>
@@ -48,5 +59,21 @@ import { INSTAGRAM_URL, EVENTO } from '../config'
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+}
+
+.creditos {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(20, 26, 18, 0.1);
+  display: grid;
+  gap: 0.25rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.creditos a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 </style>
