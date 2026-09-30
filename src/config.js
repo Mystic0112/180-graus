@@ -1,5 +1,7 @@
 // Links de conversão. Trocar aqui reflete no site inteiro.
-export const WHATSAPP_URL = 'https://w.app/180graus'
+export const INSCRICAO_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeqdnAY3EqqTS7C-xbAWFHWhFllaJCaSPyUwm50JOPRVeNsCA/viewform'
+export const WHATSAPP_URL = 'https://wa.me/qr/5T2HYV3V23X6N1'
 export const INSTAGRAM_URL = 'https://www.instagram.com/p/Dc56mJNR-ln/'
 
 // Vídeo de fundo do hero (loop, sem som). Enquanto null, fica o fundo estático.

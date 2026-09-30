@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { motion, useScroll, useSpring, useTransform } from 'motion-v'
 import CtaButton from './CtaButton.vue'
-import { WHATSAPP_URL, INSTAGRAM_URL, EVENTO, HERO_VIDEO_URL } from '../config'
+import { INSCRICAO_URL, INSTAGRAM_URL, EVENTO, HERO_VIDEO_URL } from '../config'
 import { useReveal, EASE_SOFT, SPRING_SCROLL } from '../motion/presets'
 
 const { reduce } = useReveal()
@@ -61,7 +61,7 @@ const enter = (delay) =>
       </motion.p>
 
       <motion.div v-bind="enter(0.34)" class="actions">
-        <CtaButton :href="WHATSAPP_URL" variant="accent">Quero participar</CtaButton>
+        <CtaButton :href="INSCRICAO_URL" variant="accent">Quero participar</CtaButton>
         <CtaButton :href="INSTAGRAM_URL" variant="ghost">Instagram</CtaButton>
       </motion.div>
     </div>

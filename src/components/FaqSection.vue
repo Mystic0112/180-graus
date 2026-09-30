@@ -20,7 +20,7 @@ const perguntas = [
   },
   {
     p: 'Como faço minha inscrição?',
-    r: 'Pelo WhatsApp. Toca no botão "Quero participar" que a gente te passa tudo, incluindo valores.',
+    r: 'Pelo formulário de inscrição. Toca no botão "Quero participar" e preenche. Qualquer dúvida, chama a gente no WhatsApp.',
   },
 ]
 </script>

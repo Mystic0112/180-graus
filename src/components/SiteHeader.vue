@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { motion, AnimatePresence, useScroll } from 'motion-v'
-import { WHATSAPP_URL, INSTAGRAM_URL } from '../config'
+import { INSCRICAO_URL, WHATSAPP_URL, INSTAGRAM_URL } from '../config'
 import { useReveal, SPRING_SETTLE } from '../motion/presets'
 
 const links = [
@@ -78,7 +78,7 @@ const entradaLink = (i) =>
     </nav>
 
     <div class="acoes">
-      <a class="hdr-cta" :href="WHATSAPP_URL" target="_blank" rel="noopener">Quero participar</a>
+      <a class="hdr-cta" :href="INSCRICAO_URL" target="_blank" rel="noopener">Quero participar</a>
       <button
         class="menu-btn"
         type="button"

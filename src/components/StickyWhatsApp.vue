@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { motion, AnimatePresence } from 'motion-v'
-import { WHATSAPP_URL } from '../config'
+import { INSCRICAO_URL } from '../config'
 import { useReveal } from '../motion/presets'
 
 const { reduce } = useReveal()
@@ -34,7 +34,7 @@ onUnmounted(() => observer?.disconnect())
       :exit="reduce ? undefined : { y: 96, opacity: 0 }"
       :transition="{ type: 'spring', stiffness: 200, damping: 26 }"
     >
-      <a class="cta cta--accent botao" :href="WHATSAPP_URL" target="_blank" rel="noopener">
+      <a class="cta cta--accent botao" :href="INSCRICAO_URL" target="_blank" rel="noopener">
         Quero participar
       </a>
     </motion.div>

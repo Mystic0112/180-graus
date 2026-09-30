@@ -1,7 +1,7 @@
 <script setup>
 import { motion } from 'motion-v'
 import CtaButton from './CtaButton.vue'
-import { WHATSAPP_URL } from '../config'
+import { INSCRICAO_URL } from '../config'
 import { useReveal } from '../motion/presets'
 
 const { reveal } = useReveal()
@@ -17,10 +17,10 @@ const { reveal } = useReveal()
           Pronto pra<br />virar a chave?
         </motion.h2>
         <motion.p v-bind="reveal(1)" class="texto">
-          A inscrição é rápida e feita direto no WhatsApp.
+          A inscrição é rápida, direto pelo formulário.
         </motion.p>
         <motion.div v-bind="reveal(2)" class="acao">
-          <CtaButton :href="WHATSAPP_URL" variant="dark">Quero participar</CtaButton>
+          <CtaButton :href="INSCRICAO_URL" variant="dark">Quero participar</CtaButton>
         </motion.div>
       </div>
     </div>
