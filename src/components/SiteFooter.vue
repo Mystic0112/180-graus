@@ -1,5 +1,5 @@
 <script setup>
-import { INSTAGRAM_URL, EVENTO } from '../config'
+import { INSTAGRAM_URL, WHATSAPP_URL, EVENTO } from '../config'
 </script>
 
 <template>
@@ -8,6 +8,7 @@ import { INSTAGRAM_URL, EVENTO } from '../config'
       <p class="marca">180 GRAUS</p>
       <p class="desc">Seminário de Vida no Espírito Santo. {{ EVENTO.data }}, no {{ EVENTO.local }}.</p>
       <nav class="links" aria-label="Links do rodapé">
+        <a :href="WHATSAPP_URL" target="_blank" rel="noopener">WhatsApp</a>
         <a :href="INSTAGRAM_URL" target="_blank" rel="noopener">Instagram</a>
         <a href="#conteudo">Voltar ao topo</a>
       </nav>
