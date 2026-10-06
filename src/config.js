@@ -4,8 +4,14 @@ export const INSCRICAO_URL =
 export const WHATSAPP_URL = 'https://wa.me/qr/5T2HYV3V23X6N1'
 export const INSTAGRAM_URL = 'https://www.instagram.com/p/Dc56mJNR-ln/'
 
-// Vídeo de fundo do hero (loop, sem som). Enquanto null, fica o fundo estático.
-export const HERO_VIDEO_URL = null // TODO: arquivo real (ex: 'video/hero.mp4' em public/video/)
+// Convite em vídeo do organizador (arquivos em public/video/)
+const videoBase = `${import.meta.env.BASE_URL}video/`
+export const VIDEO = {
+  teaser: `${videoBase}teaser.mp4`, // primeiros 17s, com áudio, toca uma vez
+  poster: `${videoBase}poster.jpg`, // frame do logo SHALOM
+  completo: `${videoBase}convite-completo.mp4`, // com áudio
+  duracao: '1min43', // do vídeo completo, exibida no botão
+}
 
 // Dados do evento
 export const EVENTO = {

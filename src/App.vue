@@ -2,6 +2,7 @@
 import SiteHeader from './components/SiteHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import TurnSection from './components/TurnSection.vue'
+import VideoSection from './components/VideoSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 import InfoSection from './components/InfoSection.vue'
@@ -17,6 +18,7 @@ import StickyWhatsApp from './components/StickyWhatsApp.vue'
   <main id="conteudo">
     <HeroSection />
     <TurnSection />
+    <VideoSection />
     <div class="light-zone">
       <AboutSection />
       <ExperienceSection />

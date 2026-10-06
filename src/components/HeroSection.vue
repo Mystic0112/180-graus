@@ -1,16 +1,10 @@
 <script setup>
-import { computed } from 'vue'
 import { motion, useScroll, useSpring, useTransform } from 'motion-v'
 import CtaButton from './CtaButton.vue'
-import { INSCRICAO_URL, INSTAGRAM_URL, EVENTO, HERO_VIDEO_URL } from '../config'
+import { INSCRICAO_URL, INSTAGRAM_URL, EVENTO } from '../config'
 import { useReveal, EASE_SOFT, SPRING_SCROLL } from '../motion/presets'
 
 const { reduce } = useReveal()
-
-// Vídeo ambiente só quando existe arquivo e o visitante não pediu menos movimento/dados
-const dadosReduzidos =
-  typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-data: reduce)').matches
-const mostrarVideo = computed(() => Boolean(HERO_VIDEO_URL) && !reduce.value && !dadosReduzidos)
 
 // Parallax sutil no "180°" fantasma do fundo, com inércia
 const { scrollY } = useScroll()
@@ -29,21 +23,6 @@ const enter = (delay) =>
 
 <template>
   <section id="hero" class="hero">
-    <!-- Fundo estático (gradiente + halftone) é o fallback permanente; o vídeo entra por cima -->
-    <video
-      v-if="mostrarVideo"
-      class="video-fundo"
-      :src="HERO_VIDEO_URL"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      aria-hidden="true"
-      tabindex="-1"
-    ></video>
-    <div v-if="mostrarVideo" class="veu" aria-hidden="true"></div>
-
     <motion.span class="ghost" aria-hidden="true" :style="reduce ? null : { y: ghostY }">
       180°
     </motion.span>
@@ -77,30 +56,6 @@ const enter = (delay) =>
   padding: 6rem 0 3.5rem;
   overflow: clip;
   background: radial-gradient(130% 90% at 75% 0%, var(--dark-2) 0%, var(--dark) 60%);
-}
-
-/* Vídeo ambiente em loop, atrás de tudo (o gradiente da seção é o poster/fallback) */
-.video-fundo {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Véu verde-profundo por cima do vídeo: texto legível sobre qualquer frame */
-.veu {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    to top,
-    rgba(10, 31, 18, 0.88) 0%,
-    rgba(10, 31, 18, 0.68) 55%,
-    rgba(10, 31, 18, 0.78) 100%
-  );
 }
 
 /* Motif: pontilhado halftone dos cartazes, estático e barato */

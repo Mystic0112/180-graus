@@ -16,7 +16,7 @@
   --font-body: 'Archivo', system-ui, sans-serif;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* escala z: 30 menu mobile · 35 header · 40 cta fixo */
+  /* escala z: 30 menu mobile · 35 header · 40 cta fixo · 50 player de vídeo */
 }
 
 /* ============ reset ============ */
@@ -95,6 +95,11 @@ video {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Player de vídeo (<dialog> modal) aberto: página atrás não rola */
+html:has(dialog[open]) {
+  overflow: hidden;
 }
 
 /* ============ tipografia ============ */

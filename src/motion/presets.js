@@ -8,6 +8,9 @@ export const SPRING_TAP = { type: 'spring', stiffness: 260, damping: 26 }
 // Spring de entrada: assenta em vez de "chegar e parar"
 export const SPRING_SETTLE = { type: 'spring', stiffness: 100, damping: 22, mass: 1 }
 
+// Ênfase pontual (fim da prévia -> "Assistir"): um pouco de quique, de propósito
+export const SPRING_DESTAQUE = { type: 'spring', stiffness: 380, damping: 12 }
+
 // Suavização de valores ligados ao scroll (inércia, sem seguir o dedo 1:1)
 export const SPRING_SCROLL = { stiffness: 85, damping: 28, mass: 0.6 }
 
